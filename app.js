@@ -9,7 +9,7 @@ const bookResult = document.getElementById('book-result')
 const searchBook = () => {
     spinner.style.display = 'block'
     const searchText = searchInput.value
-    const url = `http://openlibrary.org/search.json?q=${searchText}`
+    const url = `https://openlibrary.org/search.json?q=${searchText}`
     fetch(url)
     .then(res => res.json())
     .then(data => {
