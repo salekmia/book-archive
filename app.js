@@ -8,6 +8,9 @@ const bookResult = document.getElementById('book-result')
 // Search Button Function
 const searchBook = () => {
     spinner.style.display = 'block'
+    errorMessage.innerText = ''
+    searchResult.innerText = ''
+    bookResult.innerText = ''
     const searchText = searchInput.value
     const url = `https://openlibrary.org/search.json?q=${searchText}`
     fetch(url)
